@@ -1,0 +1,81 @@
+GraspVar-5 Label Description
+
+----------------------------------------
+1. Overview
+----------------------------------------
+This dataset provides annotations for robotic grasp detection.
+Each image includes:
+- Object category
+- Bounding box (object localization)
+- Three grasp contact points
+
+----------------------------------------
+2. Object Labels
+----------------------------------------
+1. plastic_bottle
+2. puzzle_cube
+3. tennis_ball
+4. plastic_ball
+5. sponge_ball
+
+----------------------------------------
+3. Bounding Box Annotation
+----------------------------------------
+Format:
+"bounding_box": [x_min, y_min, width, height]
+
+Where:
+- x_min, y_min: top-left corner of the bounding box
+- width: width of the box in pixels
+- height: height of the box in pixels
+
+Purpose:
+- Defines object location in the image
+- Supports object detection tasks
+
+----------------------------------------
+4. Contact Points Annotation
+----------------------------------------
+Format:
+"contact_points": [
+  [x1, y1],
+  [x2, y2],
+  [x3, y3]
+]
+
+Where:
+- Three points define a triangular grasp
+- Each point is a pixel coordinate
+
+----------------------------------------
+5. Coordinate System
+----------------------------------------
+- Origin (0, 0) is top-left corner
+- x-axis: left → right
+- y-axis: top → bottom
+- Units: pixels
+
+----------------------------------------
+6. Grasp Representation
+----------------------------------------
+- Contact points form a triangle
+- Triangle centroid = grasp center
+- Useful for multi-finger grasp planning
+
+----------------------------------------
+7. File Matching
+----------------------------------------
+0.png → 0.json
+
+----------------------------------------
+8. Notes
+----------------------------------------
+- One object per image
+- Each image has:
+  - 1 bounding box
+  - 3 contact points
+- No missing annotations
+
+----------------------------------------
+End of Description
+----------------------------------------
